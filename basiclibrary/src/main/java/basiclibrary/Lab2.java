@@ -32,22 +32,29 @@ public class Lab2 {
 
 
     // Calculating Averages
-    public static int calculateAverage(int[] arr){
+    public static double calculateAverage(int[] arr){
         int total = 0;
         for ( int i = 0; i < arr.length; i++ ){
             total += arr[i];
         }
-        int average = total / arr.length;
+        double average = (double)total / (double) arr.length;
         return average;
     }
 
 
     // Arrays of Arrays
     public static int[] calculateAllAverages(int[][] arrs){
-        int[] averages = new int[arrs.length];
-        for ( int i = 0; i < arrs.length; i++ ){
-            averages[i] = calculateAverage(arrs[i]);
+        int[] bestSoFar = arrs[0];
+        for ( int[] currentArray : arrs ){
+            if(calculateAverage(currentArray) < calculateAverage(bestSoFar)){
+                bestSoFar = currentArray;
+            }
         }
-        return averages;
+        return bestSoFar;
+//        int[] averages = new int[arrs.length];
+//        for ( int i = 0; i < arrs.length; i++ ){
+//            averages[i] = calculateAverage(arrs[i]);
+//        }
+//        return averages;
     }
 }

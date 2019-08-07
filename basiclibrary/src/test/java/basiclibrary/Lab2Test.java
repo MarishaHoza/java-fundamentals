@@ -56,13 +56,13 @@ public class Lab2Test {
     @Test
     public void calculateAllAverages() {
         assertArrayEquals("The nested arrays should reduce to averages",
-                new int[]{2,6,8}, Lab2.calculateAllAverages(new int[][]{{4,2,1,1},{12,8,4,0},{9,7,10,6}}));
-        assertTrue("The final array should have the same outer length as the original",
+                new int[]{4,2,1,1}, Lab2.calculateAllAverages(new int[][]{{4,2,1,1},{12,8,4,0},{9,7,10,6}}));
+        assertTrue("The final array should have the same length as the inner arrays",
                 Lab2.calculateAllAverages(new int[][]{
                         {66, 64, 58, 65, 71, 57, 60},
                         {57, 65, 65, 70, 72, 65, 51},
                         {55, 54, 60, 53, 59, 57, 61},
                         {65, 56, 55, 52, 55, 62, 57}
-                }).length == 4);
+                }).length == 7);
     }
 }
