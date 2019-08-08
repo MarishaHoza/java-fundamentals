@@ -14,8 +14,8 @@ public class AppTest {
     }
 
     @Test public void testJavaScriptLinter_noErrors(){
-        assertNull("The return should be null on a file with no errors",
-                App.javaScriptLinter("./src/test/resources/noError.js"));
+        assertTrue("The return should be an empty string on a file with no errors",
+                App.javaScriptLinter("./src/test/resources/noError.js") == "");
 
     }
 
@@ -35,7 +35,7 @@ public class AppTest {
     }
 
     @Test public void testJavaScriptLinter_emptyFile() {
-        assertNull("The return should be null on an empty file",
-                App.javaScriptLinter("./src/test/resources/emptyFile.js"));
+        assertTrue("The return should be an empty string on an empty file",
+                App.javaScriptLinter("./src/test/resources/emptyFile.js") == "");
     }
 }

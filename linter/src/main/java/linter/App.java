@@ -23,7 +23,7 @@ public class App {
     public static String javaScriptLinter(String fileLocation){
         Scanner s = null;
 
-        String errorMessage = null;
+        String errorMessage = "";
         int lineNumber = 0;
 
         try {

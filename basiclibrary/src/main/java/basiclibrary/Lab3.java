@@ -60,6 +60,8 @@ public class Lab3 {
             if ( candidates.containsKey(vote) ){
                 int temp = candidates.get(vote);
                 temp++;
+                // update a value in a hashmap
+                // https://thispointer.com/java-how-to-update-the-value-of-an-existing-key-in-hashmap-put-vs-replace/
                 candidates.replace(vote, temp);
             } else {
                 candidates.put(vote, 1);
@@ -67,6 +69,8 @@ public class Lab3 {
         }
 
         // iterate through candidates and find highest number of votes so far, assign to winner variables
+        // iterate through a hashmap
+        // https://stackoverflow.com/questions/1066589/iterate-through-a-hashmap
         for (Map.Entry<String, Integer> tally : candidates.entrySet()){
             String candidate = tally.getKey();
             int numVotes = tally.getValue();
