@@ -3,6 +3,7 @@
  */
 package linter;
 
+import org.checkerframework.checker.units.qual.A;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -10,5 +11,31 @@ public class AppTest {
     @Test public void testAppHasAGreeting() {
         App classUnderTest = new App();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
+    }
+
+    @Test public void testJavaScriptLinter_noErrors(){
+        assertNull("The return should be null on a file with no errors",
+                App.javaScriptLinter("./src/test/resources/noError.js"));
+
+    }
+
+    @Test public void testJavaScriptLinter_oneError(){
+        assertTrue("The return should be one line if there is only one error",
+                App.javaScriptLinter("./src/test/resources/oneError.js").split("\n").length == 1);
+    }
+
+    @Test public void testJavaScriptLinter_fewErrors(){
+        assertTrue("The return should be exactly 5 lines if there are 5 errors",
+                App.javaScriptLinter("./src/test/resources/fewErrors.js").split("\n").length == 5);
+    }
+
+    @Test public void testJavaScriptLinter_manyErrors(){
+        assertTrue("The return should be more than one line if there are many errors",
+                App.javaScriptLinter("./src/test/resources/manyErrors.js").split("\n").length > 1);
+    }
+
+    @Test public void testJavaScriptLinter_emptyFile() {
+        assertNull("The return should be null on an empty file",
+                App.javaScriptLinter("./src/test/resources/emptyFile.js"));
     }
 }
