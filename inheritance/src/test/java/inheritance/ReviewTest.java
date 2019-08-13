@@ -9,9 +9,10 @@ public class ReviewTest {
     @Test
     public void testToString() {
         Review testReview = new Review("Marisha", 5f, "The food was good.");
+        testReview.linkedRestaurant = "Vince's Coffee";
 
         assertEquals("The toString method should work on a new Review instance",
-                "A 5.0 star review by Marisha: The food was good.",
+                "A 5.0 star review of Vince's Coffee by Marisha: The food was good.",
                 testReview.toString());
     }
 }
