@@ -3,11 +3,11 @@
 This repo holds the first ten Java labs.
 
 ## Contents
-* ### [basics](/basics) folder
+* ### basics
   * #### Main
     * [README](/readmes/Basics.md)
     * [Code](/basics/Main.java)
-* ### [basiclibrary](/basiclibrary) folder
+* ### basiclibrary
   * #### Lab 2: Arrays, Loops, Imports, ArrayLists
     * [README](/readmes/Lab2.md)
     * [Code](/basiclibrary/src/main/java/basiclibrary/Lab2.java)
@@ -16,18 +16,18 @@ This repo holds the first ten Java labs.
     * [README](/readmes/Lab3.md)
     * [Code](/basiclibrary/src/main/java/basiclibrary/Lab3.java)
     * [Tests](/basiclibrary/src/test/java/basiclibrary/Lab3Test.java)
-* ### [linter](/linter) folder
+* ### linter
   * #### JavaScript Linter
     * [JavaScript Linter README](/readmes/JavaScriptLinter.md)
     * [Code](/linter/src/main/java/linter/App.java)
     * [Tests](/linter/src/test/java/linter/AppTest.java)
-* ### [inheritance](/inheritance) folder
+* ### inheritance
   * #### Lab 06: Inheritance and Interfaces
     * [README](/readmes/Lab6.md)
-    * [Restaurant Class]()
-    * [Restaurant Tests]()
-    * [Review Class]()
-    * [Review Tests]()
+    * [Restaurant Class](/inheritance/src/main/java/inheritance/Restaurant.java)
+    * [Restaurant Tests](/inheritance/src/test/java/inheritance/RestaurantTest.java)
+    * [Review Class](/inheritance/src/main/java/inheritance/Review.java)
+    * [Review Tests](/inheritance/src/test/java/inheritance/ReviewTest.java)
 
 
 ## Resources
@@ -59,6 +59,7 @@ This repo holds the first ten Java labs.
 * #### Classmates/People
   * Jack Kinne
   * Jackie (Bomibear)
+  * Brandon Hurrington
   * Michelle Ferreirae
   * Code Fellows Demos
 
