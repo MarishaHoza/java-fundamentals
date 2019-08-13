@@ -32,7 +32,7 @@ public class RestaurantTest {
     public void testAddReview() {
         diner.addReview(threeStarReview);
         assertEquals( "The new star rating should reflect the restaurant's only review",
-                3.0f, diner.numStars, 0.0001);
+                3.0f, diner.calcStars(), 0.0001);
     }
 
     @Test
@@ -52,7 +52,7 @@ public class RestaurantTest {
         diner.addReview(threeStarReview);
 
         assertEquals("The number of stars should not change if a review has already been added",
-                4f, diner.numStars, 0.001);
+                4f, diner.calcStars(), 0.001);
     }
 
     @Test

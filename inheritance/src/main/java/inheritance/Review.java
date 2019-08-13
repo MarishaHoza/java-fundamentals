@@ -1,7 +1,6 @@
 package inheritance;
 
 public class Review {
-    // Each Review should have a body, an author, and a number of stars.
     String author;
     float numStars;
     String body;
