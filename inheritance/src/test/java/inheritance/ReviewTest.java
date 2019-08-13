@@ -15,4 +15,9 @@ public class ReviewTest {
                 "A 5.0 star review of Vince's Coffee by Marisha: The food was good.",
                 testReview.toString());
     }
+
+    @Test (expected = IllegalArgumentException.class)
+    public void testNewReview_sixStarReview(){
+        Review sixStarReview = new Review("Hacker", 6f, "MUHUHAHAHA");
+    }
 }
