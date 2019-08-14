@@ -20,4 +20,12 @@ public class ReviewTest {
     public void testNewReview_sixStarReview(){
         Review sixStarReview = new Review("Hacker", 6f, "MUHUHAHAHA");
     }
+
+    @Test
+    public void testUpdateStars(){
+        Review testReview = new Review("Marisha", 5f, "The food was good.");
+        testReview.updateStars(2);
+        assertEquals("The stars should be updated correctly",
+                2f, testReview.numStars, 0.0001);
+    }
 }

@@ -30,6 +30,10 @@ public class Review {
         }
     }
 
+    public void updateStars(float newNumStars){
+        this.numStars = newNumStars;
+    }
+
     public String toString(){
         return String.format("A %.1f star review of %s by %s: %s", numStars, linkedBusiness.getName(), author, body);
     }

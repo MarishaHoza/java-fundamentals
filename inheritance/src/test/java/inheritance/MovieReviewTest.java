@@ -70,6 +70,7 @@ public class MovieReviewTest {
         testRestaurant.addReview(oneStarMovieReview);
         testRestaurant.addReview(twoStarReview);
         testBusiness_Theater.addReview(oneStarMovieReview);
+        savedAsMovieReview.updateStars(3);
 
         for ( Business business : businesses ) {
             System.out.println(business.toString());
