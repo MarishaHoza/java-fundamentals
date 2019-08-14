@@ -2,31 +2,16 @@ package inheritance;
 
 import java.util.LinkedList;
 
-public class Restaurant implements Business {
+public class Shop implements Business{
     String name;
+    String description;
     int priceCategory;
     LinkedList<Review> reviews = new LinkedList<>();
 
-    public Restaurant(String name, int priceCategory){
+    public Shop(String name, String description, int priceCategory) {
         this.name = name;
+        this.description = description;
         this.priceCategory = priceCategory;
-    }
-
-    public String getName(){
-        return this.name;
-    }
-
-    public LinkedList<Review> getReviews() {
-        return this.reviews;
-    }
-
-    public void addReview(Review review){
-        if ( review.linkedBusiness == null && review.getClass() != MovieReview.class ){
-            review.linkedBusiness = this;
-            reviews.add(review);
-        } else {
-            // this review has already been added to a business or is a movie review, do nothing
-        }
     }
 
     public float calcStars(){
@@ -42,8 +27,26 @@ public class Restaurant implements Business {
         return stars;
     }
 
+    public String getName(){
+        return this.name;
+    }
+
+    public LinkedList<Review> getReviews() {
+        return this.reviews;
+    }
+
+    public void addReview(Review review){
+        if ( review.linkedBusiness == null && review.getClass() != MovieReview.class ){
+            review.linkedBusiness = this;
+            reviews.add(review);
+
+        } else {
+            // this review has already been added to a business or is a movie review, do nothing
+        }
+    }
+
     public String toString(){
-        return String.format("%s is a restaurant with %.1f stars, %d reviews, and a price category of %d", name, calcStars(), reviews.size(), priceCategory);
+        return String.format("%s is a %s shop with %.1f stars, %d reviews, and a price category of %d", name, description, calcStars(), reviews.size(), priceCategory);
     }
 
 }
