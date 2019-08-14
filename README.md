@@ -28,6 +28,11 @@ This repo holds the first ten Java labs.
     * [Restaurant Tests](/inheritance/src/test/java/inheritance/RestaurantTest.java)
     * [Review Class](/inheritance/src/main/java/inheritance/Review.java)
     * [Review Tests](/inheritance/src/test/java/inheritance/ReviewTest.java)
+  * #### Lab 07: Composition and Inheritance, Part 2
+    * [README](/readmes/Lab7.md)
+    * [All Classes](/inheritance/src/main/java/inheritance)
+    * [All Tests](/inheritance/src/test/java/inheritance)
+
 
 
 ## Resources

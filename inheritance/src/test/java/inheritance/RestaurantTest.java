@@ -14,8 +14,8 @@ public class RestaurantTest {
 
     @Before
     public void makeTestObjects() {
-        coffeeHut = new Restaurant("Vince's Coffee", "$$");
-        diner = new Restaurant("Lindy's Diner", "$");
+        coffeeHut = new Restaurant("Vince's Coffee", 2);
+        diner = new Restaurant("Lindy's Diner", 1);
         twoStarReview = new Review(2f);
         threeStarReview = new Review(3f, "Average everything");
         fiveStarReview = new Review("Melody", 5f, "Outstanding!!!");
@@ -24,7 +24,7 @@ public class RestaurantTest {
     @Test
     public void testToString() {
         assertEquals("The string method should work on a Restaurant instance",
-                "Vince's Coffee is a restaurant with 0.0 stars, 0 reviews, and a price category of $$",
+                "Vince's Coffee is a restaurant with 0.0 stars, 0 reviews, and a price category of 2",
                 coffeeHut.toString());
     }
 

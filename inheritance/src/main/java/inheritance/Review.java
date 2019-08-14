@@ -4,7 +4,7 @@ public class Review {
     String author;
     float numStars;
     String body;
-    String linkedRestaurant = null;
+    Business linkedBusiness = null;
 
     public Review(String author, float numStars, String body){
         this.author = author;
@@ -30,8 +30,11 @@ public class Review {
         }
     }
 
-    public String toString(){
-        return String.format("A %.1f star review of %s by %s: %s", numStars, linkedRestaurant, author, body);
+    public void updateStars(float newNumStars){
+        this.numStars = newNumStars;
     }
 
+    public String toString(){
+        return String.format("A %.1f star review of %s by %s: %s", numStars, linkedBusiness.getName(), author, body);
+    }
 }

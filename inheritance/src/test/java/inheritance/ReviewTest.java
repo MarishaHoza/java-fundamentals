@@ -9,7 +9,7 @@ public class ReviewTest {
     @Test
     public void testToString() {
         Review testReview = new Review("Marisha", 5f, "The food was good.");
-        testReview.linkedRestaurant = "Vince's Coffee";
+        testReview.linkedBusiness = new Restaurant("Vince's Coffee", 2);
 
         assertEquals("The toString method should work on a new Review instance",
                 "A 5.0 star review of Vince's Coffee by Marisha: The food was good.",
@@ -19,5 +19,13 @@ public class ReviewTest {
     @Test (expected = IllegalArgumentException.class)
     public void testNewReview_sixStarReview(){
         Review sixStarReview = new Review("Hacker", 6f, "MUHUHAHAHA");
+    }
+
+    @Test
+    public void testUpdateStars(){
+        Review testReview = new Review("Marisha", 5f, "The food was good.");
+        testReview.updateStars(2);
+        assertEquals("The stars should be updated correctly",
+                2f, testReview.numStars, 0.0001);
     }
 }
